@@ -3,9 +3,7 @@
 
     <!--- Sidemenu -->
     <div id="sidebar-menu">
-
         <ul id="side-menu" class="metismenu">
-
             <li>
                 <a href="#" @click.prevent="handleRoute('/dashboard')">
                     <i class="mdi mdi-view-dashboard"/>

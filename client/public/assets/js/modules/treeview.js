@@ -1,8 +1,6 @@
 "use strict";
 
-import jQuery from 'jquery';
-
-export default (function ($) {
+(function ($) {
   $.fn.mdbTreeview = function () {
     var $this = $(this);
 

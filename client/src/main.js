@@ -18,13 +18,17 @@ import i18n from '@/i18n'
 import router from '@/router'
 import store from '@/store'
 import Axios from 'axios'
-import Vuetify from 'vuetify'
+import vuetify from '@/plugins/vuetify' // path to vuetify export
+import firebase from 'firebase/app'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // Sync store with router
 sync(store, router)
+
+let config = require('./environment/' + process.env.NODE_ENV + '.json')
+firebase.initializeApp(config)
 
 Vue.config.productionTip = false
 Vue.prototype.$http = Axios
@@ -40,6 +44,6 @@ export const app = new Vue({
 	i18n,
 	router,
 	store,
-  vuetify: new Vuetify(),
+  vuetify,
 	render: h => h(App)
 }).$mount('#app')

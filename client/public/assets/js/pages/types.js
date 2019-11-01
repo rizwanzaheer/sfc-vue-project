@@ -1,7 +1,5 @@
-import $ from 'jquery';
-import mdbTreeview from '../modules/treeview';
 
-export default (function() {
+$( document ).ready(function() {
   $('.treeview-animated').mdbTreeview();
 
 
@@ -52,4 +50,4 @@ export default (function() {
       $(".assign-user").css("flex", "0 0 auto");
     }
   });
-})();
+});
