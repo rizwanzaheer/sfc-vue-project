@@ -1440,6 +1440,9 @@ body.enlarged {
     line-height: 70px;
     text-align: center;
     max-height: 70px; }
+    .navbar-custom .topnav-menu .nav-link::after {
+      display: none;
+    }
   .navbar-custom .dropdown.show .nav-link {
     background-color: rgba(108, 117, 125, 0.05); }
   .navbar-custom .app-search {

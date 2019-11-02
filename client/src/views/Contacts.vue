@@ -80,7 +80,9 @@
 
 <script>
 import ContactBlock from "../components/Contacts/ContactBlock";
-import AddContactModal from '../components/Contacts/AddContactModal';
+import AddContactModal from "../components/Contacts/AddContactModal";
+
+import $ from 'jquery';
 
 export default {
   components: {
@@ -129,6 +131,19 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    $("input").on("click", function(e) {
+      if ($(this).hasClass("list-view-radio")) {
+        $(".contacts")
+          .removeClass("contacts-grid")
+          .addClass("contacts-list");
+      } else if ($(this).hasClass("grid-view-radio")) {
+        $(".contacts")
+          .removeClass("contacts-list")
+          .addClass("contacts-grid");
+      }
+    });
   }
 };
 </script>
