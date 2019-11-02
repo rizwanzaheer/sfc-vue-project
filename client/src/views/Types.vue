@@ -9,6 +9,7 @@
               <button id="create-type" class="btn btn-success btn-xs waves-effect waves-light float-right" data-toggle="modal" data-target=".add-new-type" data-backdrop="static" data-keyboard="false"> <i class="fas fa-plus"></i> <span class="ml-1">Create new call type</span> </button>
               <h4 class="header-title mt-0 mb-3">Call history</h4>
               <hr>
+                
               <div class="treeview-animated w-100">
                 <ul id="call-type-list" class="treeview-animated-list mb-3">
                   <li class="treeview-animated-items">
@@ -194,9 +195,11 @@
               <div class="col-lg-6">
                 <div class="rule-item">
                   <h5>Call taker instructions</h5>
-                  <div id="snow-editor">
-
-                  </div> <!-- end Snow-editor-->
+                  <!-- <div id="snow-editor"> -->
+                  <vue-editor v-model="content" :editorToolbar="customToolbar"></vue-editor>
+                  <!-- </div> -->
+                   <!-- end Snow-editor-->
+                  
                 </div>
               </div><!-- col-lg-6-->
               </div><!-- row-->
@@ -206,17 +209,42 @@
         </div>
       </div> <!-- end row -->
 
+ 
 
   </div> <!-- container-fluid -->
 </template>
 
 <script>
+import { VueEditor } from "vue2-editor";
+
 export default {
+  components: {
+    VueEditor
+  },
     data: () => ({
+      content: "",
+        customToolbar: [["bold", "italic", "underline","strike"], [{ list: "ordered" },{ list: "bullet" }, {indent:"-1"},{indent:"+1"}], ["image", "code-block"]],
+      // content: {
+      //       ops: [],
+      //   },
+      config: {
+          readOnly: true,
+          placeholder: 'Compose an epic...',
+      },
 
     }),
     methods: {
+      onEditorBlur(quill) {
+        console.log("editor blur!", quill);
+      },
 
+      onEditorFocus(quill) {
+        console.log("editor focus!", quill);
+      },
+
+      onSelectionChange(range) {
+        console.log("selection change!", range);
+      }
     }
 }
 </script>

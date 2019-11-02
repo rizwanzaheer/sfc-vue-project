@@ -41,6 +41,7 @@
     "vue-phone-number-input": "^0.2.3",
     "vue-snotify": "^3.2.1",
     "vue-xls-csv-parser": "0.0.21",
+    "vue2-editor": "^2.10.2",
     "vuedraggable": "^2.21.0",
     "vuetify": "^2.0.19",
     "xlsx": "^0.14.3",
