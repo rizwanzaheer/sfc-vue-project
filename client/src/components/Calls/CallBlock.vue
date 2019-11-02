@@ -29,8 +29,6 @@
 </template>
 
 <script>
-import types from '../../../public/assets/js/pages/types';
-
 export default {
     name: 'CallBlock',
     props: {
@@ -47,9 +45,6 @@ export default {
         cal_phone: Boolean,
         cal_contact: Boolean,
         cal_email: Boolean
-    },
-    mounted() {
-        types();
     }
 };
 </script>
