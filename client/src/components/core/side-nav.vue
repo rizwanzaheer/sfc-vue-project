@@ -3,7 +3,9 @@
 
     <!--- Sidemenu -->
     <div id="sidebar-menu">
+
         <ul id="side-menu" class="metismenu">
+
             <li>
                 <a href="#" @click.prevent="handleRoute('/dashboard')">
                     <i class="mdi mdi-view-dashboard"/>
@@ -20,7 +22,7 @@
             </li>
 
             <li>
-                <a href="todos.html">
+                <a href="#" @click.prevent="handleRoute('/todos')">
                   <span class="badge badge-danger rounded-circle roun float-right">4</span>
                     <i class="fas fa-tasks"/>
                     <span>To-dos</span>

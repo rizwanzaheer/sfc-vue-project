@@ -119,6 +119,14 @@ export default [
       requiresAuth: true,
       hasLayout: true
     }
+  },
+  {
+	path: '/todos',
+	view: 'Todos',
+	meta: {
+		requiresAuth: true,
+		hasLayout: true
+	}
   }
 	// {
 	// 	path: '/user-profile',
