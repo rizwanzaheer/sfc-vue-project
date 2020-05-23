@@ -188,8 +188,43 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="rule-item">
-                  <h5 class="float-left">Form data</h5>
+                  <h5>Form data</h5>
+                  <div id="custom-form">
+                    <div id="custom-form-header">
+                      <h5 class="ml-1 float-left">Custom form</h5>
+                      <div class="custom-form-button float-right">
+                        <i class="fa fa-plus tltp mt-2 mr-2" id="add-custom-field-btn" data-tippy-content="Add field" data-toggle="modal" data-target=".add-new-field" data-backdrop="static" data-keyboard="false"></i>
+                      </div>
+                    </div>
+                    <div id="custom-form-body">
+                    <div class="row">
+                      <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                        <div class="field">
+                        <div class="label">Name<span class="label-additional">(Default)</span></div>
+                        <input type="text" class="form-control form-control-sm">
+                      </div>
+                    </div>
+                      <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                        <div class="field">
+                        <div class="label">Phone<span class="label-additional">(Default)</span></div>
+                        <input type="tel" class="form-control form-control-sm">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="field">
+                      <div class="label">Message<span class="label-additional">(Default)</span></div>
+                      <textarea type="textarea" style="height: 75px;" class="form-control form-control-sm"> </textarea>
+                    </div>
+                  </div>
                 </div>
+
+                  </div>
+                  </div>
+                  </div>
+                  <!-- col-lg-6-->
               </div><!-- col-lg-6-->
 
               <div class="col-lg-6">
