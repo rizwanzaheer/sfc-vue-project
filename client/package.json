@@ -23,7 +23,7 @@
     "killbill": "github:killbill/killbill-client-js",
     "lodash": "^4.17.15",
     "metismenujs": "^1.1.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "parsleyjs": "^2.9.1",
     "sass-loader": "^7.1.0",
     "twilio-client": "^1.7.3",
